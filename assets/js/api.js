@@ -1,18 +1,16 @@
 // Alpha Vantage API call
 
+
 var API = "DHI2B31EUTFJ9PV7";
+
+// This will pull info from a input box
 var symbol = "MSFT";
+
+// this will pull info from a button group
 var interval = "60min";
-var JSONresponse = $("#jsonresponse");
-// event listener for any button click.
-//  NEEDS TO BE CHANGED WHEN FRONT END LAYOUT FINALIZED
-//  ONLY WORKS WITH open-page.html FILE
 
-$(document).on('click', 'button', function () {
-  var API = "DHI2B31EUTFJ9PV7";
-  var symbol = "MSFT";
-  var interval = "60min";
-
+// event listener for search button click to make stock info API call
+$(document).on('click', '#searchButton', function () {
   $.ajax({
     url: "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + symbol + "&interval=" + interval + "&apikey=" + API,
     method: "GET"
