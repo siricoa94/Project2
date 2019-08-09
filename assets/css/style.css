@@ -3,6 +3,21 @@
 body {
     background-color: black;
 }
+.navbar{
+    background-color: rgb(48, 46, 46) !important;
+}
+.navbar-brand{
+    text-align: center !important;
+    font-size: 40px;
+    font-family: "Escrow Condensed Semibold",serif !important;
+    color:white !important;
+}
+.dropdown-toggle{
+    background-color: #0080c3;
+    border-color: #0080c3;
+    font-family: "Escrow Condensed Semibold",serif !important;
+    
+}
 .jumbotron{
     font-family: "Escrow Condensed Semibold",serif !important;
     background-color: rgb(10, 10, 10)!important;
