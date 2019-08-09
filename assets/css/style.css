@@ -4,5 +4,18 @@ body {
     background-color: black;
 }
 .jumbotron{
+    font-family: "Escrow Condensed Semibold",serif !important;
     background-color: rgb(10, 10, 10)!important;
+    text-align: center!important;
+}
+.lead{
+    color: rgb(139, 134, 134) !important;
+}
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width:90%;  
+    background-color: #0080c3;
+    border-color: #0080c3;
 }
