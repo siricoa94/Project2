@@ -16,15 +16,19 @@
      <a class="navbar-brand">Spenditure</a>
      <form class="form-inline">
        <div class="dropdown">
-         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">
-           Sign In
-         </button>
-         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-           <a class="dropdown-item" href="#">User Name</a>
-           <a class="dropdown-item" href="#">Password</a>
-           <a class="dropdown-item" href="#">Sign in</a>
-         </div>
+         <nav class="navbar">
+           <!-- Google Auth Buttom -->
+           <!--  -->
+           <span class="navbar-text text-white mr-4 p-0" id="user">
+             <!-- User's google Display Name goes here when logged in -->
+           </span>
+           <!-- Google Login Button -->
+           <button class="btn btn-secondary text-center log-in" id="login">
+             
+             Login</button>
+           <!--  -->
+         </nav>
+       </div>
        </div>
      </form>
    </nav>
@@ -33,20 +37,20 @@
      <p class="lead">Easy financial planning for all your long and short term goals, with real time investment data
        specialized for you!</p>
      <hr class="my-4">
-     <a class="btn btn-primary btn-lg" href="#" role="button">Sign Up Now</a>
+     <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Sign Up Now</a> -->
    </div>
    <div id="picture-of-charts container">
-        <div class="well text-center">
-                <div class="col-md-12"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <a href="#"><img class= "homepage-image" src="assets/images/chart-icon-png-71.png" alt="inn_logo"></a>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="#"><img class= "homepage-image" src="assets/images/chart-icon-png-74.png" alt="ccs_logo"></a>
-                    </div>
-                </div>
-            </div>
+     <div class="well text-center">
+       <div class="col-md-12"></div>
+       <div class="row">
+         <div class="col-md-6">
+           <a href="#"><img class="homepage-image" src="assets/images/chart-icon-png-71.png" alt="inn_logo"></a>
+         </div>
+         <div class="col-md-6">
+           <a href="#"><img class="homepage-image" src="assets/images/chart-icon-png-74.png" alt="ccs_logo"></a>
+         </div>
+       </div>
+     </div>
    </div>
    <div class="jumbotron">
      <h1 class="display-4 text-white">User Insights</h1>
@@ -80,12 +84,23 @@
          portfolio.</p>
        <hr class="my-4">
      </div>
-     
-   </div>
 
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+
+
+
+   <script src="assets/js/googleAuth.js"></script>
+   <script src="assets/js/api.js"></script>
+   
  </body>
 
  </html>
