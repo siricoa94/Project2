@@ -1,5 +1,3 @@
-console.log("API script read")
-
 // event listener for search button click to make stock info API call
 $(document).on('click', '#stockSearchButton', function () {
   // Alpha Vantage API call
@@ -25,7 +23,10 @@ $(document).on('click', '#stockSearchButton', function () {
     url: "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=" + symbol + "&interval=" + interval + "&apikey=" + API,
     method: "GET"
   }).then(function (response) {
+    console.log("------------------------------------");
+    console.log("AlphaVantage Response Object")
     console.log(response);
+    console.log("------------------------------------");
 
   });
 });
@@ -35,10 +36,6 @@ $(document).on('click', '#stockSearchButton', function () {
 function updatePage(NYTData) {
   // Set Limit of articles to display
   var numArticles = 3;
-
-  // Log the NYTData to console, where it will show up as an object
-  console.log(NYTData);
-  console.log("------------------------------------");
 
   // Loop through and build elements for the defined number of articles
   for (var i = 0; i < numArticles; i++) {
@@ -107,8 +104,11 @@ $(document).ready(function () {
   // This is for dev purposes only. Should be removed when data has been formatted to page.
   // (so we don't keep making an API call every time we refresh)
   $.getJSON("https://api.myjson.com/bins/pic7v", function (data) {
+    console.log("------------------------------------");
     console.log("THIS RESPONSE IS FROM A MYJSON SITE. NOT A REAL AJAX CALL")
     console.log("REMOVE BEFORE FINAL DEPLOYMENT")
+    console.log(data);
+    console.log("------------------------------------");
     }).then(updatePage);
 
 
