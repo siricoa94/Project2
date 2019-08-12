@@ -12,26 +12,68 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand">Spenditure</a>
-        <form class="form-inline">
-          
-        </form>
-      </nav>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">Spenditure</a>
+    <form class="form-inline">
+
+    </form>
+  </nav>
   <div id="user-information">
     <!-- this is module for the financial user information populating both pages-->
     <div id="user-pie-chart">
       <!-- This is where user information is turned into pie chart -->
     </div>
   </div>
-  <div id="stock-information">
+  <div class="border m-5 p-1border-white" id="stock-information">
     <!-- module to push stock info -->
     <div id="chart-stock">
       <!-- chart to push stock info to -->
     </div>
-    <div id="stock-search">
-      <!-- stock search bar -->
-
+    <div class="bg-white p-3" id="stock-search">
+      <!-- stock search form -->
+      <form id="search-form">
+        <!-- Symbol Input -->
+        <div class="form-group row">
+          <label for="inputSymbol" class="col-sm-2 col-form-label">Stock Symbol</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputSymbol" placeholder="MSFT">
+          </div>
+        </div>
+        <!-- Interval Select Radio Button Group -->
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Interval (mins)</legend>
+            <div class="col-sm-10">
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                  <input type="radio" name="intervalSelect" id="intervalSelect1" autocomplete="off" value="1min">
+                  1
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="intervalSelect" id="intervalSelect2" autocomplete="off" value="5min">
+                  5
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="intervalSelect" id="intervalSelect3" autocomplete="off" value="15min">
+                  15
+                </label>
+                <label class="btn btn-secondary">
+                  <input type="radio" name="intervalSelect" id="intervalSelect4" autocomplete="off" value="30min">
+                  30
+                </label>
+                <label class="btn btn-secondary active" >
+                  <input type="radio" name="intervalSelect" id="intervalSelect5" autocomplete="off" value="60min" checked>
+                  60
+                </label>
+              </div>
+            </div>
+        </fieldset>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary" id="stockSearchButton">Search</button>
+          </div>
+        </div>
+      </form>
     </div>
     <div id="stock-stats">
       <!-- stats from stock api -->
@@ -41,10 +83,14 @@
     <!-- where side scrolling newsfeed will go -->
   </div>
 
-</div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Stock Lookup Script -->
+  <script src="assets/js/api.js"></script>
+
 </body>
 
 </html>
