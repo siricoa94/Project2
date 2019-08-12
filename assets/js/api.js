@@ -4,15 +4,21 @@ console.log("API script read")
 $(document).on('click', '#stockSearchButton', function () {
   // Alpha Vantage API call
   event.preventDefault();
- 
+
   var API = "DHI2B31EUTFJ9PV7";
 
   // This will pull info from a input box
-  var symbol = $( "#inputSymbol" ).val();
+  var symbol = $("#inputSymbol").val();
   console.log(symbol);
+
+
   // this will pull info from a button group
   var interval = $('input[name=intervalSelect]:checked').val();
   console.log(interval);
+
+  var dataPoints = $('input[name=dataPoints]:checked').val();
+  console.log(dataPoints);
+
 
   $.ajax({
 
@@ -21,6 +27,5 @@ $(document).on('click', '#stockSearchButton', function () {
   }).then(function (response) {
     console.log(response);
     
-
   });
 });
