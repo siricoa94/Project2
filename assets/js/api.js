@@ -1,6 +1,5 @@
 // Alpha Vantage API call
 
-
 var API = "DHI2B31EUTFJ9PV7";
 
 // This will pull info from a input box

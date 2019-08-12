@@ -1,8 +1,8 @@
+var userID = null;
+
 $(document).ready(function () {
 
-  // Firebase config object
-  // This is provided by firebase
-  const config = {
+  var firebaseConfig = {
     apiKey: "AIzaSyAO6LdnhpYMQ2Z0pNZF76XzwnOuGgDMDZ8",
     authDomain: "bootcamp-project2.firebaseapp.com",
     databaseURL: "https://bootcamp-project2.firebaseio.com",
@@ -11,53 +11,42 @@ $(document).ready(function () {
     messagingSenderId: "185623751431",
     appId: "1:185623751431:web:27dc8a38c4302727"
   };
-  // INITIALIZE FIREBASE AUTH
-  firebase.initializeApp(config);
-  console.log(firebase);
-  // choosing Google Auth Provider to use in firebase auth settings
-  // assigning white listed domains where it is allowed (ex: localhost)
-  const provider = new firebase.auth.GoogleAuthProvider();
-  const auth = firebase.auth();
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-  // Login Button click event listener and associated 'login' function
-  // When log-in is clicked, it changes the button's associated data to 'log-out' stuff
-  $(document).on('click', '#login', function () {
+  //Choose providers to use in your firebase auth settings and whitelist domains where you allow it. localhost is whitelisted by default.
+
+  const provider = new firebase.auth.GoogleAuthProvider();
+  const auth = firebase.auth()
+
+  $(document).on('click', '.log-in', function () {
+    event.preventDefault();
     login(provider, isLoggedIn);
     $(this).removeClass('log-in')
-      .removeID('login')
       .addClass('log-out')
-      .addID('logout')
       .html('Logout');
   });
 
-  // Logout Button listener and function
   $(document).on('click', '.log-out', function () {
+    event.preventDefault();
+    console.clear();
     auth.signOut().then(() => {
       $(this).removeClass('log-out')
         .addClass('log-in')
-        .html('Login With Google');
+        .html('Login');
       isLoggedOut();
     }).catch((error) => {
       if (error) throw error
     });
   });
 
-  // Using an arrow function to handle the firebase auth function
   const login = (provider, isLoggedIn) => {
     auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL).then(() => {
-      // tells firebase to make the user to authenticate using the selected providers (GoogleAuth in this case)
-
       auth.signInWithPopup(provider).then((result) => {
-        // the promise function then returns an object of the user's info
-        // (ex: email, name, gmail avatar img)
-        // google handles all password security/encryption 
         const user = result.user;
         console.log(user)
-        // runs a 'isLoggedIn' function if authentication is successful
         isLoggedIn(user);
-
       }).catch((error) => {
-        // If google returns an error, this code logs those errors for reference
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -69,19 +58,16 @@ $(document).ready(function () {
     })
   }
 
-  // Functions that handle what happens after a user logs in or out
   const isLoggedIn = user => {
     //DO SOMETHING
+    $("#user").text(`Welcome, ` + user.displayName);
+    userID = user.uid;
     
-    $("#user").text("User: " + user.displayName)
-
-
-
   }
 
   const isLoggedOut = () => {
     //DO SOMETHING
-    $("#user").empty()
+    $("#user").html(`Goodbye`);
+    
   }
-
-});
+})

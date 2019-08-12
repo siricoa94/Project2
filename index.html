@@ -16,12 +16,18 @@
      <a class="navbar-brand">Spenditure</a>
      <form class="form-inline">
        <div class="dropdown">
-         <!--  -->
-         <button class="btn btn-secondary text-center log-in" id="login">
-           Login with Google
-         </button>
-         <div id="user"></div>
-         <!--  -->
+         <nav class="navbar">
+           <!-- Google Auth Buttom -->
+           <!--  -->
+           <span class="navbar-text text-white mr-4 p-0" id="user">
+             <!-- User's google Display Name goes here when logged in -->
+           </span>
+           <!-- Google Login Button -->
+           <button class="btn btn-secondary text-center log-in" id="login">
+             
+             Login</button>
+           <!--  -->
+         </nav>
        </div>
        </div>
      </form>
@@ -46,7 +52,7 @@
        </div>
      </div>
    </div>
-   <div class="jumbotron">
+   <div class="jumbotron" id="box">
      <h1 class="display-4 text-white">User Insights</h1>
      <p class="lead">Set simple and straight forward investment and savings goals. See your spending habits real-time in
        charts and graphs that track where you are and where you want to be. Get up to date information on potential
@@ -80,17 +86,21 @@
      </div>
 
    </div>
-   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-   <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-
-   <!-- Add Firebase products that you want to use -->
-   <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-auth.js"></script>
-
-
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+   <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+   <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
+
+
+
    <script src="assets/js/googleAuth.js"></script>
+   <script src="assets/js/api.js"></script>
+   
  </body>
 
  </html>
