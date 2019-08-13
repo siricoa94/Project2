@@ -4,7 +4,7 @@ USE savings;
 
 CREATE TABLE savingsInput(
 	id INT AUTO_INCREMENT NOT NULL,
-    deposit FLOAT(10,2),
-    withdrawl FLOAT(10,2),
+    balance FLOAT(10,2),
+    googleId VARCHAR (50) NOT NULL,
     PRIMARY KEY (id)
 );
