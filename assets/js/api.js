@@ -24,3 +24,13 @@ $(document).on('click', '#stockSearchButton', function () {
 
   });
 });
+
+var queryParams = { "api-key": "R1a31F4tBjCUaM2ho8GtIFsrSdtXt30M" };
+
+$.ajax({
+  url:"https://slack-redir.net/link?url=https%3A%2F%2Fapi.nytimes.com%2Fsvc%2Fsearch%2Fv2%2Farticlesearch.json?q=finance" + queryParams,
+  method: "GET"
+}).then(function(response){
+  console.log(response);
+  document.write$("#news-feed")
+});
