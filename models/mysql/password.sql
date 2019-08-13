@@ -7,3 +7,4 @@ CREATE TABLE userInfo(
     userID VARCHAR(45),
     PRIMARY KEY (id)
 );
+
