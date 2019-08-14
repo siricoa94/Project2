@@ -1,18 +1,4 @@
 {
-<<<<<<< HEAD
-  "name": "project2",
-  "version": "1.0.0",
-  "description": "Project 2 Repo",
-  "main": "index.js",
-  "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.17.1",
-    "mysql": "^2.17.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
   "name": "Project2",
   "version": "1.0.0",
   "description": "Project 2 Repo",
@@ -31,16 +17,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
->>>>>>> 58c85549e54d020f8f30a764ed80750f353fadf1
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bigPoppaChop/Project2.git"
   },
-<<<<<<< HEAD
-=======
   "keywords": [],
->>>>>>> 58c85549e54d020f8f30a764ed80750f353fadf1
   "author": "",
   "license": "ISC",
   "bugs": {
