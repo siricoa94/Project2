@@ -61,8 +61,8 @@ $(document).ready(function () {
   const isLoggedIn = user => {
     //DO SOMETHING
     $("#user").text(`Welcome, ` + user.displayName);
-    userID = user.uid;
-    
+    window.location.href = "/open-page";
+
   }
 
   const isLoggedOut = () => {

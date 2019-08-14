@@ -23,7 +23,7 @@
             <!-- User's google Display Name goes here when logged in -->
           </span>
           <!-- Google Login Button -->
-          <button class="btn btn-secondary text-center log-in" id="login">
+          <button class="btn btn-secondary text-center log-in" id="log-in">
 
             Login</button>
           <!--  -->
@@ -34,6 +34,8 @@
   </nav>
   <div id="user-information">
     <!-- this is module for the financial user information populating both pages-->
+   
+    </form>
     <div id="user-pie-chart">
       <!-- This is where user information is turned into pie chart -->
     </div>
@@ -117,9 +119,11 @@
   </div>
   <div id="News-feed">
     <!-- where side scrolling newsfeed will go -->
-    
-  </div>
 
+    <div class="container">
+      <div class="card-deck bg-white" id="article-section"></div>
+      </div>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -133,7 +137,7 @@
 
 
 
-  <script src="assets/js/googleAuth.js"></script>
+  <script src="../../assets/js/openPage.js"></script>
   <script src="assets/js/api.js"></script>
 
 </body>
