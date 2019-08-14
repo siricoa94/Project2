@@ -38,3 +38,20 @@ body {
     height:200px;
     width:40%;
 }
+.form-inline{color: rgb(48, 46, 46) !important;
+    font-family: "Escrow Condensed Semibold",serif !important;
+}
+.btn{
+    background-color: rgb(139, 134, 134) !important;
+    border-color: rgb(139, 134, 134) !important;
+    font-family: "Escrow Condensed Semibold",serif !important;
+}
+legend{
+    font-family: "Escrow Condensed Semibold",serif !important;
+}
+label{
+    font-family: "Escrow Condensed Semibold",serif !important;
+}
+#stock-information{
+    float: right !important;; 
+}
