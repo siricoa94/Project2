@@ -1,4 +1,3 @@
-DROP DATABASE IF EXISTS userPassword;
 CREATE DATABASE userPassword;
 
 USE userPassword;
