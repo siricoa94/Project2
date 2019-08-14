@@ -1,4 +1,5 @@
 var connection = require("../config/connection.js");
+var objectUser = require("../public/assets/js/openPage.js");
 
 
 // Object for all our SQL statement functions.
@@ -21,12 +22,26 @@ var orm = {
     });
   }
 };
-let newQty = data.balance + response.deposit;
-connection.query("UPDATE savingsInput set balance=? where id=?", [newQty,response.balance], function (err, res) {
+// router.get("/", function(req, res) {
+//   cat.all(function(data) {
+//     var hbsObject = {
+//       cats: data
+//     };
+//     console.log(hbsObject);
+//     res.render("index", hbsObject);
+//   });
+// });
+console.log(objectUser)
+connection.query('select * from savings where id=1', function (err, data) {
+  console.log(data);
+});
+
+connection.query("UPDATE savingsInput set balance=200 where id=1", function (err, res) {
   if (err) throw err;
   console.log('Money Deposited ');
   // console.log();
   connection.end();
+
 });
 let newQty = data.balance - response.withdraw
 connection.query("UPDATE savingsInput set balance=? where id=?", [newQty,response.balance], function (err, res) {

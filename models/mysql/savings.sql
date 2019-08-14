@@ -8,3 +8,5 @@ CREATE TABLE savingsInput(
     googleId VARCHAR (50) NOT NULL,
     PRIMARY KEY (id)
 );
+INSERT INTO savingsInput (balance, googleId)
+VALUES("820","uqy2MiRaI2XErybNUuTIDlHN2Zs1");
