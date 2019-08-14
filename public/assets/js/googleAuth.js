@@ -62,6 +62,7 @@ $(document).ready(function () {
     //DO SOMETHING
     $("#user").text(`Welcome, ` + user.displayName);
     userID = user.uid;
+    var userName = user.displayName
     
   }
 
