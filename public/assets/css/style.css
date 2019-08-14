@@ -40,6 +40,7 @@ body {
 }
 .form-inline{color: rgb(48, 46, 46) !important;
     font-family: "Escrow Condensed Semibold",serif !important;
+    float: left;
 }
 .btn{
     background-color: rgb(139, 134, 134) !important;
@@ -53,5 +54,9 @@ label{
     font-family: "Escrow Condensed Semibold",serif !important;
 }
 #stock-information{
-    float: right !important;; 
+    float: right !important; 
+}
+.pie-chart{
+    height:300px !important;
+    width:360px !important;
 }
