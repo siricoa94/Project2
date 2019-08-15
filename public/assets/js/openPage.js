@@ -34,5 +34,5 @@ $(document).ready(function () {
   })
 });
 
-module.exports(exportObject);
+// module.exports(exportObject);
 
