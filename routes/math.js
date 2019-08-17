@@ -32,21 +32,25 @@ var orm = {
 //   });
 // });
 console.log(objectUser)
-connection.query('select * from savings where id=1', function (err, data) {
+connection.query('SELECT * FROM savings WHERE id=1', function (err, data) {
   console.log(data);
 });
 
-connection.query("UPDATE savingsInput set balance=200 where id=1", function (err, res) {
-  if (err) throw err;
-  console.log('Money Deposited ');
-  // console.log();
-  connection.end();
 
-});
-let newQty = data.balance - response.withdraw
-connection.query("UPDATE savingsInput set balance=? where id=?", [newQty,response.balance], function (err, res) {
-  if (err) throw err;
-  console.log('Money Withdrawn ' + response.withdraw);
-  // console.log();
-  connection.end();
-});
+
+
+
+// connection.query("UPDATE savingsInput set balance=200 where id=1", function (err, res) {
+//   if (err) throw err;
+//   console.log('Money Deposited ');
+//   // console.log();
+//   connection.end();
+
+// });
+// let newQty = data.balance - response.withdraw
+// connection.query("UPDATE savingsInput set balance=? where id=?", [newQty,response.balance], function (err, res) {
+//   if (err) throw err;
+//   console.log('Money Withdrawn ' + response.withdraw);
+//   // console.log();
+//   connection.end();
+// });
