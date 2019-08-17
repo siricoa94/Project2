@@ -8,13 +8,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" />
+<<<<<<< HEAD
   <script type="text/javascript" src="../js/buttonClicks.js"></script>
   <title>Spenditure</title>
+=======
+
+>>>>>>> 53d8e984eb3306fac4d5a55cb8aa4f343e7f2ed5
 </head>
 
 <body>
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand">Spenditure</a>
+    <img src="../../assets/images/logo.png" />
     <form class="form-inline">
       <div class="dropdown">
         <nav class="navbar">
@@ -33,10 +37,27 @@
       </div>
     </form>
   </nav>
-  <div id="user-information">
+  <div id="user-information" class="border m-5 p-1 border-white">
     <!-- this is module for the financial user information populating both pages-->
-   
-    </form>
+    <div id="input-form" class="bg-white p-3 m-1">
+      <form class="form-inline col-sm-6">
+        <h3>Financials</h3>
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          <option selected>Choose...</option>
+          <option id="deposit" value="1">Deposit</option>
+          <option id="withdrawl" value="2">Withdrawl</option>
+          <option id="balance" value="3">Balance</option>
+        </select>
+
+        <label class="sr-only" for="inlineFormInputName2">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="ex. 75.00">
+
+        <button type="submit" class="btn btn-primary my-1">Submit</button>
+        <div id="balance-total"></div>
+      </form>
+      <img class="pie-chart col-sm-6" src="../../assets/images/503020-PieChart.png" />
+    </div>
     <div id="user-pie-chart">
       <!-- This is where user information is turned into pie chart -->
     </div>
@@ -122,9 +143,9 @@
     <!-- where side scrolling newsfeed will go -->
 
     <div class="container">
-      <div class="card-deck bg-white" id="article-section"></div>
-      </div>
+      <div class="card-deck bg-secondary border border-white p-1" id="article-section"></div>
     </div>
+  </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -139,7 +160,7 @@
 
 
   <script src="../../assets/js/openPage.js"></script>
-  <script src="assets/js/api.js"></script>
+  <script src="../../assets/js/api.js"></script>
 
 </body>
 

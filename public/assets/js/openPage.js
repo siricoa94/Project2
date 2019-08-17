@@ -1,5 +1,3 @@
-
-
 var firebaseConfig = {
   apiKey: "AIzaSyAO6LdnhpYMQ2Z0pNZF76XzwnOuGgDMDZ8",
   authDomain: "bootcamp-project2.firebaseapp.com",
@@ -11,15 +9,30 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 auth = firebase.auth();
-  $( document ).ready(function() {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        console.log('user is logged');
-        console.log(user.uid);
-        $("#user").text(`Welcome, ` + user.displayName);
-        $("#log-in").removeClass('log-in')
-      .addClass('log-out')
-      .html('Logout');
-      }
-});
+var exportObject
+$(document).ready(function () {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      console.log('user is logged');
+      console.log(user.uid);
+      $("#user").text(`Welcome, ` + user.displayName);
+      $("#log-in").removeClass('log-in')
+        .addClass('log-out')
+        .html('Logout');
+    }
   });
+  $(document).on('click', '#userSubmit', function(){
+    event.preventDefault();
+      console.log($("#userSelection").val());
+      console.log($("#userInput").val());
+      var command = $("#userSelection").val();
+      var number = $("#userInput").val();
+      exportObject = {
+        command: command,
+        number: number
+      };
+  })
+});
+
+// module.exports(exportObject);
+
